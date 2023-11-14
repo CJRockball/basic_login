@@ -1,0 +1,20 @@
+<h1> Home Page</h1>
+
+<p>Welcome to the home page</p>
+
+{% if user %}
+    <h2>You are logged in :)</h2>
+    <p>
+        Hi {{ user.username }}! You are logged in, so you can access the private page. <a href="/secure/private">here</a>!
+    </p>
+{% else %}
+    <h2>You are NOT logged in :(</h2>
+    <p>
+        Hello stranger. You are not logged in. Please follow the link to <a href="/secure/auth/login" class="btn">login</a>!
+    </p>
+{% endif %}
+
+<hr>
+
+{% include '_site_map.html' %}
+

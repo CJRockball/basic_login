@@ -1,0 +1,18 @@
+<h1>Sign up</h1>
+
+{% for error in errors %}
+    <p style="color: red">{{ error  }}</p>
+{% endfor %}
+<form action="/auth/signup" method="post">
+    <p>
+        <p><label for="">Email</label></p>
+        <input type="email" name="username" required>
+    </p>
+    <p>
+        <p><label for="">Password</label></p>
+        <input type="password" name="password" required>
+    </p>
+    <input type="submit" value="submit">
+</form>
+
+{% include '_site_map.html' %}
